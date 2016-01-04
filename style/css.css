@@ -1,0 +1,25 @@
+.red a{
+    color: #d9534f!important;
+  }
+  
+  .green a{
+      color: #5cb85c!important;
+    }
+    
+    .lblue a{
+      color:  #5bc0de!important; 
+      }
+      
+      .blue a{
+       color: #337ab7!important; 
+      }
+
+.red-line {
+   color: white;
+    background: #d9534f!important;
+  }
+  
+  .green-line {
+     color: white;
+      background: #5cb85c;
+    }
