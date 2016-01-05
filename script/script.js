@@ -3,7 +3,7 @@ allMonths    = ["Янв", "Веф", "Мар", "Апр", "Май", "Июн", "И�
 minutes      = date.getMinutes(),
 hours        = date.getHours(),
 getmonth     = date.getMonth(),
-day			 = date.getDay(),
+day			 = date.getDate(),
 month        = allMonths[getmonth],
 getTime      = time(),
 getDate		 = getDayFunc(),
@@ -24,6 +24,8 @@ else {
 return day;
 }
 }
+//$("#end-date").attr("value", new Date().getFullYear() + "-"+ new Date().getMonth()+1 + "-" + getDayFunc())
+			 
 //minutes = minutes > 9 ? minutes : "0" + minutes;
 $("#go").click(function () {
 var newTask = $("#task").val(),
@@ -40,5 +42,4 @@ $("table > tbody").append("<tr><td>" + getDate + " " + month + " " + time() + "<
 $("#task, #comment, #end-date, #end-time").val("");
 taskCount ++;
 $("#allTasks").text(taskCount);
-console.log(endDate + " " + endTime)
 });
