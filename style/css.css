@@ -31,3 +31,29 @@
    .end-time-table-row {
     min-width: 120px;
    }
+
+   .alert-place {
+    height: 90px;
+    width: 850px;
+   }
+
+   #taskAdded {
+    display: none;
+    color: #337ab7;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 40px;
+   }
+
+   a:hover {
+    color: black!important;
+   }
+
+
+
+
+   #scrollContent{
+  height:186px;
+  overflow:auto;
+  position:relative;
+}

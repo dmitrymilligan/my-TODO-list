@@ -15,7 +15,7 @@
 <div class="col-md-4"></div>
 <div class="col-md-5"></div> -->
 <div class="container">
-    <button type="button" class="btn btn-danger" data-container="body" data-toggle="popover"
+  <!--   <button type="button" class="btn btn-danger" data-container="body" data-toggle="popover"
     data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Важные дела <span id="" class="badge">14</span>
 
     </button>
@@ -35,6 +35,7 @@
     data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Все дела <span id="allTasks" class="badge"></span>
 
     </button>
+   
      <div class="col-md-9">
   <table class="table">
   <thead>
@@ -48,7 +49,75 @@
   </thead>
   <tbody>
   </tbody>
+</table> -->
+<div class="alert-place">
+       <div id="taskAdded">Задача добавлена</div>
+   </div>
+<div class="col-md-9">
+<ul class="nav nav-tabs" id="myTab">
+    <li class="active"><a class="btn btn-danger" href="#home">Важные дела <span id="" class="badge">7</span></a></li>
+    <li><a class="btn btn-success" href="#profile">Текущие дела <span id="" class="badge">13</span></a></li>
+    <li><a class="btn btn-info" href="#messages">Не срочные дела <span id="" class="badge">3</span></a></li>
+    <li><a class="btn btn-primary" href="#settings">Выполненные дела <span id="" class="badge">17</span></a></li>
+</ul>
+ 
+<div class="tab-content">
+    <div class="tab-pane active" id="home">
+   <table class="table">
+  <thead>
+    <tr class="success">
+      <th class="date-table-row">Дата</th>
+      <th>Задание</th>
+      <th>Примечание</th>
+      <th class="end-time-table-row">Крайний срок</th>
+      <th>Приоритет</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
 </table>
+  </div>
+    <div class="tab-pane" id="profile">  <table class="table">
+  <thead>
+    <tr class="success">
+      <th class="date-table-row">Дата</th>
+      <th>Задание</th>
+      <th>Примечание</th>
+      <th class="end-time-table-row">Крайний срок</th>
+      <th>Приоритет</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div>
+    <div class="tab-pane" id="messages">  <table class="table">
+  <thead>
+    <tr class="success">
+      <th class="date-table-row">Дата</th>
+      <th>Задание</th>
+      <th>Примечание</th>
+      <th class="end-time-table-row">Крайний срок</th>
+      <th>Приоритет</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div>
+    <div class="tab-pane" id="settings">  <table class="table">
+  <thead>
+    <tr class="success">
+      <th class="date-table-row">Дата</th>
+      <th>Задание</th>
+      <th>Примечание</th>
+      <th class="end-time-table-row">Крайний срок</th>
+      <th>Приоритет</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
+</div>
     </div>
     <div class="col-md-3">
             <input id="task" type="text" placeholder="Добавить задачу"><br><br>
@@ -70,9 +139,9 @@
             <h3 id="myModalLabel">Список задач</h3>
     </div>
     <div class="modal-body">
-        <p>Добавляйте задачи, выставляя приоритетность каждой из них разным цветом.</p>
-        <p>Выставляйте крайний срок выполнения задачи</p>
-        <p>Переходите по вкладкам приоритетов задач</p>
+        <p>Добавляйте задачи, выставляя приоритетность каждой из них разным цветом;</p>
+        <p>Выставляйте крайний срок выполнения задачи;</p>
+        <p>Переходите по вкладкам приоритетов задач;</p>
     </div>
     <div class="modal-footer">
         <button class="btn" data-dismiss="modal" aria-hidden="true">Закрыть</button>
@@ -84,6 +153,22 @@
     </div> 
 </div>
 </div>
+
+
+
+
+
+
+
+
+<div class="container">
+
+</div>
+
+
+
+
+
 
 </body>
 <script src="script/jquery-2.1.4.min.js"></script>

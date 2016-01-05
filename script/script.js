@@ -1,3 +1,4 @@
+$(document).ready(function () {
 var date     = new Date(),
 allMonths    = ["Янв", "Веф", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
 minutes      = date.getMinutes(),
@@ -42,4 +43,29 @@ $("table > tbody").append("<tr><td>" + getDate + " " + month + " " + time() + "<
 $("#task, #comment, #end-date, #end-time").val("");
 taskCount ++;
 $("#allTasks").text(taskCount);
+addTask();
+});
+function addTask () {
+	$("#taskAdded").fadeIn("slow").fadeOut(3500);
+}
+
+
+
+
+
+
+
+
+
+
+
+$('#myTab a').click(function (e) {
+	 e.preventDefault();
+	 $(this).tab('show');
+});
+
+$(function () {
+$('#myTab a:last').tab('show');
+})
+
 });
