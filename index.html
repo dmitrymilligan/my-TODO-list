@@ -9,251 +9,64 @@
 
 </head>
 <body>
+
 <!-- <div class="container">
 <div class="col-md-3"></div>
 <div class="col-md-4"></div>
 <div class="col-md-5"></div> -->
 <div class="container">
     <button type="button" class="btn btn-danger" data-container="body" data-toggle="popover"
-    data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Важные дела <span class="badge">14</span>
+    data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Важные дела <span id="" class="badge">14</span>
 
     </button>
     <button type="button" class="btn btn-success" data-container="body" data-toggle="popover"
-    data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Текущие дела <span class="badge">1</span>
+    data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Текущие дела <span id="" class="badge">1</span>
 
     </button>
     <button type="button" class="btn btn-info" data-container="body" data-toggle="popover"
-    data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Не срочные дела <span class="badge">7</span>
+    data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Не срочные дела <span id="" class="badge">7</span>
 
     </button>
     <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover"
-    data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Выполненные дела <span class="badge">8</span>
+    data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Выполненные дела <span id="" class="badge">8</span>
 
     </button>
     <button type="button" class="btn" data-container="body" data-toggle="popover"
-    data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Все дела <span class="badge">35</span>
+    data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Все дела <span id="allTasks" class="badge"></span>
 
     </button>
-    <br class="">
-    <br class="">
-    <table class="table">
-        <thead>
-            <tr class="info">
-                <th class="">Дата</th>
-                <th class="">Задание</th>
-                <th class="" contenteditable="false">Примечание</th>
-                <th class="">Приоритет</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="green-line">
-                <td>13.02.2016</td>
-                <td class="" contenteditable="false">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-                <td>
-                    <ul class="nav nav-pills">
-                        <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b class="caret"></b></a>
+     <div class="col-md-9">
+  <table class="table">
+  <thead>
+    <tr class="success">
+      <th class="date-table-row">Дата</th>
+      <th>Задание</th>
+      <th>Примечание</th>
+      <th class="end-time-table-row">Крайний срок</th>
+      <th>Приоритет</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+    </div>
+    <div class="col-md-3">
+            <input id="task" type="text" placeholder="Добавить задачу"><br><br>
+            <input id="comment" type="text" placeholder="Примечание"><br><br>
+            
+            <input id="end-date" type="date" name="date"><label for="date"> Крайний срок. Дата</label><br><br>
+            <input id="end-time" type="time" name="time"><label for="time"> Крайний срок. Время</label><br><br>
 
-                            <ul
-                            class="dropdown-menu">
-                                <li class="red"><a href="#" class="">Важные дела</a>
-                                </li>
-                                <li class="green"><a href="#" class="">Текущие дела</a>
-                                </li>
-                                <li class="lblue"><a href="#" class="">Не срочные дела</a>
-                                </li>
-                                <li class="blue"><a href="#" class="">Выполненные дела</a>
-                                </li>
-                    </ul>
-                    </li>
-                    </ul>
-                </td>
-            </tr>
-            <tr class="green-line">
-                <td class="" contenteditable="false">23.12.2015</td>
-                <td class="" contenteditable="false">Встреча с iPod Studio</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-               <td>
-                    <ul class="nav nav-pills">
-                        <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b class="caret"></b></a>
+<input id="go" type="button" value="Готово">
 
-                            <ul
-                            class="dropdown-menu">
-                                <li class="red"><a href="#" class="">Важные дела</a>
-                                </li>
-                                <li class="green"><a href="#" class="">Текущие дела</a>
-                                </li>
-                                <li class="lblue"><a href="#" class="">Не срочные дела</a>
-                                </li>
-                                <li class="blue"><a href="#" class="">Выполненные дела</a>
-                                </li>
-                    </ul>
-                    </li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-               <td>
-                    <ul class="nav nav-pills">
-                        <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b class="caret"></b></a>
-
-                            <ul
-                            class="dropdown-menu">
-                                <li class="red"><a href="#" class="">Важные дела</a>
-                                </li>
-                                <li class="green"><a href="#" class="">Текущие дела</a>
-                                </li>
-                                <li class="lblue"><a href="#" class="">Не срочные дела</a>
-                                </li>
-                                <li class="blue"><a href="#" class="">Выполненные дела</a>
-                                </li>
-                    </ul>
-                    </li>
-                    </ul>
-                </td>
-            </tr>
-            <tr class="red-line">
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="" contenteditable="false">Закончить TODO лист.</td>
-                <td class="" contenteditable="false">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-        </tbody>
-    </table>
-    <br class="">
-    <br class="">
-    <table class="table">
-        <thead>
-            <tr class="danger">
-                <th class="">Дата</th>
-                <th class="">Задание</th>
-                <th class="" contenteditable="false">Примечание</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr class="ok">
-                <td class="" contenteditable="false">23.12.2015</td>
-                <td class="" contenteditable="false">Встреча с iPod Studio</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="" contenteditable="false">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-        </tbody>
-    </table>
-    <br class="">
-    <br class="">
-    <table class="table">
-        <thead>
-            <tr class="success">
-                <th class="">Дата</th>
-                <th class="">Задание</th>
-                <th class="" contenteditable="false">Примечание</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr class="ok">
-                <td class="" contenteditable="false">23.12.2015</td>
-                <td class="" contenteditable="false">Встреча с iPod Studio</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="" contenteditable="false">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-            <tr>
-                <td class="">13.02.2016</td>
-                <td class="">Закончить TODO лист.</td>
-                <td class="">Макет выполнен. Функционал настраивается</td>
-            </tr>
-        </tbody>
-    </table>
+    </div>
 </div>
 </div>
 
 </body>
 <script src="script/jquery-2.1.4.min.js"></script>
 <script src="bootstrap/js/bootstrap-min.js"></script>
+<script src="script/script.js"></script> 
 <script>
 	$("[data-toggle=popover]").popover();
 </script>

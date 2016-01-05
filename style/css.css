@@ -23,3 +23,11 @@
      color: white;
       background: #5cb85c;
     }
+
+   .date-table-row {
+    min-width: 115px;
+   }
+
+   .end-time-table-row {
+    min-width: 120px;
+   }
