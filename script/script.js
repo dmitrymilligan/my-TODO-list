@@ -45,7 +45,7 @@ if( (newTask === "") || (newTask === " ") ) {
 else {
 
 }
-$("#all > table tbody").append("<tr><td><label><input type='checkbox'><span></span></label></td><td>" + getDate + " " + month + " " + time() + "</td>" + "<td>" + newTask + "</td>" + "<td>" + comment + "</td>" + "<td>" + endDate + " " + endTime + "</td></tr>" );
+$("#all > table > tbody").append("<tr><td><label><input type='checkbox'><span></span></label></td><td>" + getDate + " " + month + " " + time() + "</td>" + "<td>" + newTask + "</td>" + "<td>" + comment + "</td>" + "<td>" + endDate + " " + endTime + "</td></tr>" );
 $("#task, #comment, #end-date, #end-time").val("");
 taskCount ++;
 $("#allTasksCount").text(taskCount);
@@ -53,7 +53,8 @@ addTask();
 $("input[type='checkbox']").click(function () {
 if($(this).is(":checked")) {
 $(this).closest("tr").css("color","red");
-$("#done > table > tbody").append($(this).closest("tr"));
+complete();
+$("#done > table > tbody, #all > table tbody").append($(this).closest("tr"));
 doneCount++;
 $("#doneCount").text(doneCount);
 }
@@ -64,6 +65,9 @@ $(this).closest("tr").css("color","")
 }); //END
 function addTask () {
 	$("#taskAdded").fadeIn("slow").fadeOut(3500);
+}
+function complete () {
+	$("#complete").fadeIn("slow").fadeOut(3500);
 }
 
 

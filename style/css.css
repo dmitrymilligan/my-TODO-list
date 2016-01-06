@@ -37,7 +37,7 @@
     width: 850px;
    }
 
-   #taskAdded {
+   #taskAdded, #complete {
     display: none;
     color: #337ab7;
     font-weight: bold;
@@ -99,9 +99,6 @@ input[type="checkbox"]:checked + span   {
 }
 
 #end-time {
-  height: 75px;
-    width: 115px;
-    border: none;
     padding-left: 30px;
     cursor: pointer;
     outline-color: transparent;
