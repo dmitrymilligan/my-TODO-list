@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+
 var date     = new Date(),
 allMonths    = ["Янв", "Веф", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
 minutes      = date.getMinutes(),
@@ -18,7 +20,7 @@ return new Date().getHours() + ":" + new Date().getMinutes(); // Здесь я �
 }
 };
 function getDayFunc () {
-if (day < 10) {
+if (day < 9) {
 return "0" + day;
 }
 else {
@@ -28,32 +30,37 @@ return day;
 //$("#end-date").attr("value", new Date().getFullYear() + "-"+ new Date().getMonth()+1 + "-" + getDayFunc())
 			 
 //minutes = minutes > 9 ? minutes : "0" + minutes;
-$("#go").click(function () {
+$("#go").click(function () {  //Start
 var newTask = $("#task").val(),
 comment     = $("#comment").val(),
 endDate		= $("#end-date").val(),
 endTime		= $("#end-time").val();
+if(endDate === "") {
+	endTime = "Без крайнего срока";
+}; 
 if( (newTask === "") || (newTask === " ") ) {
 	return false
 }
 else {
 
 }
-$("table > tbody").append("<tr><td>" + getDate + " " + month + " " + time() + "</td>" + "<td>" + newTask + "</td>" + "<td>" + comment + "</td>" + "<td>" + endDate + " " + endTime + "</td></tr>" );
+$("#all > table tbody").append("<tr><td><label><input type='checkbox'><span></span></label></td><td>" + getDate + " " + month + " " + time() + "</td>" + "<td>" + newTask + "</td>" + "<td>" + comment + "</td>" + "<td>" + endDate + " " + endTime + "</td></tr>" );
 $("#task, #comment, #end-date, #end-time").val("");
 taskCount ++;
-$("#allTasks").text(taskCount);
+$("#allTasksCount").text(taskCount);
 addTask();
-});
+$("input[type='checkbox']").click(function () {
+if($(this).is(":checked")) {
+$(this).closest("tr").css("color","red")
+}
+else {
+$(this).closest("tr").css("color","")
+}
+})
+}); //END
 function addTask () {
 	$("#taskAdded").fadeIn("slow").fadeOut(3500);
 }
-
-
-
-
-
-
 
 
 

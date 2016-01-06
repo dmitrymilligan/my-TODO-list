@@ -55,17 +55,19 @@
    </div>
 <div class="col-md-9">
 <ul class="nav nav-tabs" id="myTab">
-    <li class="active"><a class="btn btn-danger" href="#home">Важные дела <span id="" class="badge">7</span></a></li>
-    <li><a class="btn btn-success" href="#profile">Текущие дела <span id="" class="badge">13</span></a></li>
-    <li><a class="btn btn-info" href="#messages">Не срочные дела <span id="" class="badge">3</span></a></li>
-    <li><a class="btn btn-primary" href="#settings">Выполненные дела <span id="" class="badge">17</span></a></li>
+    <li class="active tasks-active-animation"><a class="btn btn-danger" href="#urgent">Важные дела <span id="" class="badge">7</span></a></li>
+    <li class="tasks-active-animation"><a class="btn btn-success" href="#current">Текущие дела <span id="" class="badge">13</span></a></li>
+    <li class="tasks-active-animation"><a class="btn btn-info" href="#trivial">Не срочные дела <span id="" class="badge">3</span></a></li>
+    <li class="tasks-active-animation"><a class="btn btn-primary" href="#done">Выполненные дела <span id="" class="badge">17</span></a></li>
+     <li class="tasks-active-animation"><a class="btn" href="#all">Все дела <span id="allTasksCount" class="badge"></span></a></li>
 </ul>
  
 <div class="tab-content">
-    <div class="tab-pane active" id="home">
+    <div class="tab-pane active" id="urgent">
    <table class="table">
   <thead>
     <tr class="success">
+      <th>Завершить</th>
       <th class="date-table-row">Дата</th>
       <th>Задание</th>
       <th>Примечание</th>
@@ -77,9 +79,10 @@
   </tbody>
 </table>
   </div>
-    <div class="tab-pane" id="profile">  <table class="table">
+    <div class="tab-pane" id="current">  <table class="table">
   <thead>
     <tr class="success">
+      <th>Завершить</th>
       <th class="date-table-row">Дата</th>
       <th>Задание</th>
       <th>Примечание</th>
@@ -90,9 +93,10 @@
   <tbody>
   </tbody>
 </table></div>
-    <div class="tab-pane" id="messages">  <table class="table">
+    <div class="tab-pane" id="trivial">  <table class="table">
   <thead>
     <tr class="success">
+      <th>Завершить</th>
       <th class="date-table-row">Дата</th>
       <th>Задание</th>
       <th>Примечание</th>
@@ -103,9 +107,10 @@
   <tbody>
   </tbody>
 </table></div>
-    <div class="tab-pane" id="settings">  <table class="table">
+    <div class="tab-pane" id="done">  <table class="table">
   <thead>
     <tr class="success">
+      <th>Завершить</th>
       <th class="date-table-row">Дата</th>
       <th>Задание</th>
       <th>Примечание</th>
@@ -117,6 +122,20 @@
   </tbody>
 </table>
 </div>
+ <div class="tab-pane" id="all">  <table class="table">
+  <thead>
+    <tr class="success">
+      <th>Завершить</th>
+      <th class="date-table-row">Дата</th>
+      <th>Задание</th>
+      <th>Примечание</th>
+      <th class="end-time-table-row">Крайний срок</th>
+      <th>Приоритет</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div>
 </div>
     </div>
     <div class="col-md-3">
