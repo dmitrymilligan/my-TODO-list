@@ -97,3 +97,20 @@ input[type="checkbox"] + span {
 input[type="checkbox"]:checked + span   {
  background: url(../img/check-checked.png) no-repeat;
 }
+
+#end-time {
+  height: 75px;
+    width: 115px;
+    border: none;
+    padding-left: 30px;
+    cursor: pointer;
+    outline-color: transparent;
+}
+
+tr {
+ -webkit-transition: .8s linear;
+  -moz-transition: .8s linear;
+  -ms-transition: .8s linear;
+  -o-transition: .8s linear;
+  transition: .8s linear;
+}

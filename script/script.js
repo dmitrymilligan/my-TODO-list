@@ -10,6 +10,7 @@ day			 = date.getDate(),
 month        = allMonths[getmonth],
 getTime      = time(),
 getDate		 = getDayFunc(),
+doneCount 	 = 0,
 taskCount 	 = 0;
 function time () {
 if (minutes < 10) { // Используется minutes
@@ -51,7 +52,10 @@ $("#allTasksCount").text(taskCount);
 addTask();
 $("input[type='checkbox']").click(function () {
 if($(this).is(":checked")) {
-$(this).closest("tr").css("color","red")
+$(this).closest("tr").css("color","red");
+$("#done > table > tbody").append($(this).closest("tr"));
+doneCount++;
+$("#doneCount").text(doneCount);
 }
 else {
 $(this).closest("tr").css("color","")
