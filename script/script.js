@@ -3,7 +3,6 @@ $(function () {
 
 var date     = new Date(),
 arr			 = [],  
-obj			 = {},
 allMonths    = ["Янв", "Веф", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
 minutes      = date.getMinutes(),
 hours        = date.getHours(),
@@ -37,10 +36,12 @@ $("#go").click(function () {  //Start
 var newTask = $("#task").val(),
 comment     = $("#comment").val(),
 endDate		= $("#end-date").val(),
-endTime		= $("#end-time").val();
-// obj.comment = comment,
-// obj.endDate = endDate,
-// obj.endTime = endTime;
+endTime		= $("#end-time").val(),
+obj			= {};
+obj.task    = newTask;
+obj.comment = comment;
+obj.endDate = endDate;
+obj.endTime = endTime;
 
 if(endDate === "") {
 	endTime = "Без крайнего срока";
@@ -49,7 +50,7 @@ if( (newTask === "") || (newTask === " ") ) {
 	return false
 }
 
-
+arr.push(obj);
 $("#all > table > tbody").append("<tr><td><label><input type='checkbox'><span></span></label></td><td>" + getDate + " " + month + " " + time() + "</td>" + "<td>" + newTask + "</td>" + "<td>" + comment + "</td>" + "<td>" + endDate + " " + endTime + "</td><td></td></tr>" );
 
 if($("#radio-urgent").is(":checked")) {
@@ -64,7 +65,6 @@ else if($("#radio-trivial").is(":checked")) {
 
 $("#task, #comment, #end-date, #end-time").val("");
 $("#radio-trivial").prop("checked","checked");
-//arr.push(obj);
 
 console.log(arr);
 taskCount ++;
