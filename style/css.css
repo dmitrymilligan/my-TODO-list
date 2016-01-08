@@ -145,3 +145,27 @@ tr {
   -o-transition: all .8s linear;
   transition: all .8s linear;
 }
+
+#go, .link {
+  color: white;
+    background: #009889;
+    border: none;
+    margin-top: 10px;
+    padding: 4px 30px;
+    outline-color: transparent;
+    box-shadow: 2px 2px 2px gray;
+    -webkit-transition: .1s linear;
+    -moz-transition: .1s linear;
+    -ms-transition: .1s linear;
+    -o-transition: .1s linear;
+    transition: .1s linear;
+}
+
+#go:hover, .link:hover {
+  color: #009889;
+background: white;
+}
+
+.link {
+  text-decoration: none!important;
+}

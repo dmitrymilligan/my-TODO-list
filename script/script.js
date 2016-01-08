@@ -70,14 +70,15 @@ console.log(arr);
 taskCount ++;
 $("#allTasksCount").text(taskCount);
 addTask();                 // Вывод: "Задача добавленна"
-$("table").find("tbody > tr > td > label > input[type='checkbox']").click(function () {
+$("table").find("tbody > tr > td > label > input[type='checkbox']").click(function () {     // Помечаю задачу как выполненную. Чекбокс в положение checked.
 if($(this).is(":checked")) {
 $(this).closest("tr").css({ background: "#8dc63f",
 						    color:      "white" 
 });
 
 complete();				// Вывод: "Задача помеченна как выполненная"
-$("#done > table > tbody, #all > table tbody").append($(this).closest("tr"));
+$("#all > table tbody").append($(this).closest("tr"));   //#done > table > tbody, 
+//$("#done > table > tbody").
 doneCount++;
 $("#doneCount").text(doneCount);
 }
