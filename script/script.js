@@ -46,18 +46,30 @@ if( (newTask === "") || (newTask === " ") ) {
 else {
 
 }
-$("#all > table > tbody").append("<tr><td><label><input type='checkbox'><span></span></label></td><td>" + getDate + " " + month + " " + time() + "</td>" + "<td>" + newTask + "</td>" + "<td>" + comment + "</td>" + "<td>" + endDate + " " + endTime + "</td></tr>" );
+
+$("#all > table > tbody").append("<tr><td><label><input type='checkbox'><span></span></label></td><td>" + getDate + " " + month + " " + time() + "</td>" + "<td>" + newTask + "</td>" + "<td>" + comment + "</td>" + "<td>" + endDate + " " + endTime + "</td><td></td></tr>" );
+if($("#radio-urgent").is(":checked")) {
+	$("#all > table > tbody > tr:last-child > td:last-child").text("Важно");
+}
+else if($("#radio-current").is(":checked")) {
+	$("#all > table > tbody > tr:last-child > td:last-child").text("Текущее");
+}
+else if($("#radio-trivial").is(":checked")) {
+	$("#all > table > tbody > tr:last-child > td:last-child").text("Отсутствует");
+}
 $("#task, #comment, #end-date, #end-time").val("");
+$("#radio-trivial").attr("checked");
+
 taskCount ++;
 $("#allTasksCount").text(taskCount);
-addTask();
+addTask();                 // Вывод: "Задача добавленна"
 console.log(arr.length);
-$("input[type='checkbox']").click(function () {
+$("table > tbody > tr > td > label > input[type='checkbox']").click(function () {
 if($(this).is(":checked")) {
 $(this).closest("tr").css({ background: "#8dc63f",
 						    color:      "white" 
 });
-complete();
+complete();				// Вывод: "Задача помеченна как выполненная"
 $("#done > table > tbody, #all > table tbody").append($(this).closest("tr"));
 doneCount++;
 $("#doneCount").text(doneCount);
@@ -69,7 +81,7 @@ $(this).closest("tr").css({ background: "",
 }
 }); //$("input[type='checkbox']").click
 }); //END
-function addTask () {
+function addTask () {                                     //Объеденить в одну функцию.
 	$("#taskAdded").fadeIn("slow").fadeOut(1500);
 }
 function complete () {

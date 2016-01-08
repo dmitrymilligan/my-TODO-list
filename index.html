@@ -147,10 +147,12 @@
             <input id="end-time" type="time" name="time"><label for="time"> Крайний срок. Время</label><br><br>
             <fieldset>
               <legend>Приоритет</legend>
-            <label><input id="urgent-check" type="checkbox"><span></span></label>Важно
-          <label><input id="current-check" type="checkbox"><span></span></label>Текущее
-            </fieldset>
+            
+         <label><input type="radio" id="radio-urgent" name="radio-choice" value="urgent"><span>Важно</span></label><br>
+     <label><input type="radio" id="radio-current" name="radio-choice" value="current"><span>Текущее</span></label><br>
+        <label><input type="radio" id="radio-trivial" name="radio-choice" value="trivial" checked><span>Отсутствует</span></label><br>
 
+  
 <input id="go" type="button" value="Готово"><br><br>
 
 <!-- Справка !-->
