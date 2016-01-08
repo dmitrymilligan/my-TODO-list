@@ -1,0 +1,120 @@
+.red a{
+    color: #d9534f!important;
+  }
+  
+  .green a{
+      color: #5cb85c!important;
+    }
+    
+    .lblue a{
+      color:  #5bc0de!important; 
+      }
+      
+      .blue a{
+       color: #337ab7!important; 
+      }
+
+.red-line {
+   color: white;
+    background: #d9534f!important;
+  }
+  
+  .green-line {
+     color: white;
+      background: #5cb85c;
+    }
+
+   .date-table-row {
+    min-width: 115px;
+   }
+
+   .end-time-table-row {
+    min-width: 120px;
+   }
+
+   .alert-place {
+    height: 90px;
+    width: 850px;
+   }
+
+   #taskAdded, #complete {
+    display: none;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 40px;
+   }
+
+#taskAdded {
+  color: #337ab7;
+}
+
+#complete {
+color: #5cb85c;
+}
+
+   a:hover {
+    color: black!important;
+   }
+
+
+
+
+   #scrollContent{
+  height:186px;
+  overflow:auto;
+  position:relative;
+}
+
+.tasks-active-animation {
+  -webkit-transition: .4s linear;
+  -moz-transition: .4s linear;
+  -ms-transition: .4s linear;
+  -o-transition: .4s linear;
+  transition: .4s linear;
+}
+
+
+.tasks-active-animation:hover {
+  margin-top: -15px; 
+-webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+-moz-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);;
+}
+
+label {
+height: 13px;
+width: 13px;
+display: inline-block;
+position: relative;
+vertical-align: middle;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+input[type="checkbox"] + span {
+ position: absolute; 
+ left: 0; top: 0;
+ width: 100%; height: 100%;
+ background: url(../img/check-not-checked.png) no-repeat; 
+ cursor: pointer;
+}
+
+input[type="checkbox"]:checked + span   {
+ background: url(../img/check-checked.png) no-repeat;
+}
+
+#end-time {
+    padding-left: 30px;
+    cursor: pointer;
+    outline-color: transparent;
+}
+
+tr {
+ -webkit-transition: .8s linear;
+  -moz-transition: .8s linear;
+  -ms-transition: .8s linear;
+  -o-transition: .8s linear;
+  transition: .8s linear;
+}
