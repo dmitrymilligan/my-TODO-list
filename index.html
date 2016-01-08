@@ -6,50 +6,11 @@
 <title>My TODO list</title>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="style/css.css">
-
 </head>
 <body>
 
-<!-- <div class="container">
-<div class="col-md-3"></div>
-<div class="col-md-4"></div>
-<div class="col-md-5"></div> -->
+
 <div class="container">
-  <!--   <button type="button" class="btn btn-danger" data-container="body" data-toggle="popover"
-    data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Важные дела <span id="" class="badge">14</span>
-
-    </button>
-    <button type="button" class="btn btn-success" data-container="body" data-toggle="popover"
-    data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Текущие дела <span id="" class="badge">1</span>
-
-    </button>
-    <button type="button" class="btn btn-info" data-container="body" data-toggle="popover"
-    data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Не срочные дела <span id="" class="badge">7</span>
-
-    </button>
-    <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover"
-    data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Выполненные дела <span id="" class="badge">8</span>
-
-    </button>
-    <button type="button" class="btn" data-container="body" data-toggle="popover"
-    data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Все дела <span id="allTasks" class="badge"></span>
-
-    </button>
-   
-     <div class="col-md-9">
-  <table class="table">
-  <thead>
-    <tr class="success">
-      <th class="date-table-row">Дата</th>
-      <th>Задание</th>
-      <th>Примечание</th>
-      <th class="end-time-table-row">Крайний срок</th>
-      <th>Приоритет</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table> -->
 <div class="alert-place">
        <div id="taskAdded">Задача добавлена</div>
        <div id="complete">Задача помеченна как выполненная</div>
@@ -148,8 +109,8 @@
             <fieldset>
               <legend>Приоритет</legend>
             
-         <label><input type="radio" id="radio-urgent" name="radio-choice" value="Важно"><span>Важно</span></label><br>
-     <label><input type="radio" id="radio-current" name="radio-choice" value="Текущее"><span>Текущее</span></label><br>
+         <label><input type="radio" id="radio-urgent" name="radio-choice" value="Высокий"><span>Высокий</span></label><br>
+     <label><input type="radio" id="radio-current" name="radio-choice" value="Текущий"><span>Текущий</span></label><br>
         <label><input type="radio" id="radio-trivial" name="radio-choice" value="Отсутствует" checked><span>Отсутствует</span></label><br>
 
   
@@ -166,7 +127,7 @@
             <h3 id="myModalLabel">Список задач</h3>
     </div>
     <div class="modal-body">
-        <p>Добавляйте задачи, выставляя приоритетность каждой из них разным цветом;</p>
+        <p>Добавляйте задачи, выставляя приоритетность каждой из них;</p>
         <p>Выставляйте крайний срок выполнения задачи;</p>
         <p>Переходите по вкладкам приоритетов задач;</p>
     </div>
@@ -188,9 +149,6 @@
 
 
 
-<div class="container">
-
-</div>
 
 
 
@@ -198,10 +156,7 @@
 
 
 </body>
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>  <!-- src="script/jquery-2.1.4.min.js"  Six_1 !-->
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>  <!-- src="script/jquery-2.1.4.min.js" !-->
 <script src="bootstrap/js/bootstrap-min.js"></script>
 <script src="script/script.js"></script> 
-<script>
-	$("[data-toggle=popover]").popover();
-</script>
 </html>

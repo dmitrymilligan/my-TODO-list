@@ -1,8 +1,9 @@
-$(document).ready(function () {
+$(function () {
 
 
 var date     = new Date(),
-arr			 = [],  // На всякий случай.
+arr			 = [],  
+obj			 = {},
 allMonths    = ["Янв", "Веф", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
 minutes      = date.getMinutes(),
 hours        = date.getHours(),
@@ -37,39 +38,44 @@ var newTask = $("#task").val(),
 comment     = $("#comment").val(),
 endDate		= $("#end-date").val(),
 endTime		= $("#end-time").val();
+// obj.comment = comment,
+// obj.endDate = endDate,
+// obj.endTime = endTime;
+
 if(endDate === "") {
 	endTime = "Без крайнего срока";
 }; 
 if( (newTask === "") || (newTask === " ") ) {
 	return false
 }
-else {
 
-}
 
 $("#all > table > tbody").append("<tr><td><label><input type='checkbox'><span></span></label></td><td>" + getDate + " " + month + " " + time() + "</td>" + "<td>" + newTask + "</td>" + "<td>" + comment + "</td>" + "<td>" + endDate + " " + endTime + "</td><td></td></tr>" );
+
 if($("#radio-urgent").is(":checked")) {
-	$("#all > table > tbody > tr:last-child > td:last-child").text($("input:checked").val());
+	$("#all").find("table > tbody > tr:last-child > td:last-child").text($("input:checked").val());
 }
 else if($("#radio-current").is(":checked")) {
 	$("#all > table > tbody > tr:last-child > td:last-child").text($("input:checked").val());
 }
 else if($("#radio-trivial").is(":checked")) {
-	$("#all > table > tbody > tr:last-child > td:last-child").text($("input:checked").val());
+	$("#all").find("table > tbody > tr:last-child > td:last-child").text($("input:checked").val());
 }
+
 $("#task, #comment, #end-date, #end-time").val("");
-
 $("#radio-trivial").prop("checked","checked");
+//arr.push(obj);
 
+console.log(arr);
 taskCount ++;
 $("#allTasksCount").text(taskCount);
 addTask();                 // Вывод: "Задача добавленна"
-console.log(arr.length);
-$("table > tbody > tr > td > label > input[type='checkbox']").click(function () {
+$("table").find("tbody > tr > td > label > input[type='checkbox']").click(function () {
 if($(this).is(":checked")) {
 $(this).closest("tr").css({ background: "#8dc63f",
 						    color:      "white" 
 });
+
 complete();				// Вывод: "Задача помеченна как выполненная"
 $("#done > table > tbody, #all > table tbody").append($(this).closest("tr"));
 doneCount++;
