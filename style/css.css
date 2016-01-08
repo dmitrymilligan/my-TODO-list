@@ -39,11 +39,16 @@
 
    #taskAdded, #complete {
     display: none;
+<<<<<<< HEAD
+=======
+    color: #337ab7;
+>>>>>>> 404d8ed9008931ff09da63b5d6eec11aac79972a
     font-weight: bold;
     text-align: center;
     padding-top: 40px;
    }
 
+<<<<<<< HEAD
 #taskAdded {
   color: #337ab7;
 }
@@ -52,6 +57,8 @@
 color: #5cb85c;
 }
 
+=======
+>>>>>>> 404d8ed9008931ff09da63b5d6eec11aac79972a
    a:hover {
     color: black!important;
    }
