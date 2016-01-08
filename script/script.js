@@ -49,16 +49,17 @@ else {
 
 $("#all > table > tbody").append("<tr><td><label><input type='checkbox'><span></span></label></td><td>" + getDate + " " + month + " " + time() + "</td>" + "<td>" + newTask + "</td>" + "<td>" + comment + "</td>" + "<td>" + endDate + " " + endTime + "</td><td></td></tr>" );
 if($("#radio-urgent").is(":checked")) {
-	$("#all > table > tbody > tr:last-child > td:last-child").text("Важно");
+	$("#all > table > tbody > tr:last-child > td:last-child").text($("input:checked").val());
 }
 else if($("#radio-current").is(":checked")) {
-	$("#all > table > tbody > tr:last-child > td:last-child").text("Текущее");
+	$("#all > table > tbody > tr:last-child > td:last-child").text($("input:checked").val());
 }
 else if($("#radio-trivial").is(":checked")) {
-	$("#all > table > tbody > tr:last-child > td:last-child").text("Отсутствует");
+	$("#all > table > tbody > tr:last-child > td:last-child").text($("input:checked").val());
 }
 $("#task, #comment, #end-date, #end-time").val("");
-$("#radio-trivial").attr("checked");
+
+$("#radio-trivial").prop("checked","checked");
 
 taskCount ++;
 $("#allTasksCount").text(taskCount);
