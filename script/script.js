@@ -2,6 +2,7 @@ $(document).ready(function () {
 
 
 var date     = new Date(),
+arr			 = [],  // На всякий случай.
 allMonths    = ["Янв", "Веф", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
 minutes      = date.getMinutes(),
 hours        = date.getHours(),
@@ -50,24 +51,29 @@ $("#task, #comment, #end-date, #end-time").val("");
 taskCount ++;
 $("#allTasksCount").text(taskCount);
 addTask();
+console.log(arr.length);
 $("input[type='checkbox']").click(function () {
 if($(this).is(":checked")) {
-$(this).closest("tr").css("color","red");
+$(this).closest("tr").css({ background: "#8dc63f",
+						    color:      "white" 
+});
 complete();
 $("#done > table > tbody, #all > table tbody").append($(this).closest("tr"));
 doneCount++;
 $("#doneCount").text(doneCount);
 }
 else {
-$(this).closest("tr").css("color","")
-}
+$(this).closest("tr").css({ background: "",
+							color: 		""
 })
+}
+}); //$("input[type='checkbox']").click
 }); //END
 function addTask () {
-	$("#taskAdded").fadeIn("slow").fadeOut(3500);
+	$("#taskAdded").fadeIn("slow").fadeOut(1500);
 }
 function complete () {
-	$("#complete").fadeIn("slow").fadeOut(3500);
+	$("#complete").fadeIn("slow").fadeOut(1500);
 }
 
 

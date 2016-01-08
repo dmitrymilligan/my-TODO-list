@@ -39,16 +39,12 @@
 
    #taskAdded, #complete {
     display: none;
-<<<<<<< HEAD
-=======
     color: #337ab7;
->>>>>>> 404d8ed9008931ff09da63b5d6eec11aac79972a
     font-weight: bold;
     text-align: center;
     padding-top: 40px;
    }
 
-<<<<<<< HEAD
 #taskAdded {
   color: #337ab7;
 }
@@ -57,8 +53,7 @@
 color: #5cb85c;
 }
 
-=======
->>>>>>> 404d8ed9008931ff09da63b5d6eec11aac79972a
+
    a:hover {
     color: black!important;
    }
@@ -119,9 +114,9 @@ input[type="checkbox"]:checked + span   {
 }
 
 tr {
- -webkit-transition: .8s linear;
-  -moz-transition: .8s linear;
-  -ms-transition: .8s linear;
-  -o-transition: .8s linear;
-  transition: .8s linear;
+ -webkit-transition: all .8s linear;
+  -moz-transition: all .8s linear;
+  -ms-transition: all .8s linear;
+  -o-transition: all .8s linear;
+  transition: all .8s linear;
 }
